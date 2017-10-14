@@ -44,7 +44,7 @@
 \newcommand{\tlsince}[1]{%
    \def\tl@since{#1}
 }
-\newcommand{\tltextstart}[2][base west]{%
+\newcommand{\tltextstart}[2][base east]{%
    \tikzset{
        tl@startyear/.style={
            font=#2,
@@ -55,12 +55,12 @@
        }
    }
 }
-\newcommand{\tltextend}[2][north east]{%
+\newcommand{\tltextend}[2][base west]{%
    \tikzset{
        tl@endyear/.style={
            font=#2,
            name=tl@endyear,
-           below,
+		   above=\tl@textstartabove-2.5pt,
            inner xsep=0pt,
            anchor=#1,
        }
@@ -136,7 +136,7 @@
        node [tl@startyear] {\tl@startlabel}
        rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width-1pt)
        node [tl@endyear] {\pgfmathparse{ifthenelse(#3==0,,#3)}\pgfmathresult}
-       (\hintscolumnwidth,0pt) ;
+       (\hintscolumnwidth,\tl@runningwidth) ;
     \pgfmathsetlength{\pgf@xa}{#3} \ifdim\pgf@xa=0pt
        \shade [left color=#1] (\tl@startfraction*\hintscolumnwidth,0)
            rectangle (\tl@endfraction*\hintscolumnwidth,\tl@width);

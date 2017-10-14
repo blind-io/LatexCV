@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.31)  14 OCT 2017 11:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.3.31)  14 OCT 2017 12:59
 entering extended mode
 **main.tex
 (C:\Users\User\Documents\work\Jobs\LatexCV\source\main.tex
@@ -1459,23 +1459,23 @@ LaTeX Font Info:    Font shape `T1/lmss/m/it' in size <10.95> not available
 [1
 
 {C:/Users/User/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] [2]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 205.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 205.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 206.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 206.
 
 (C:\Users\User\Documents\work\Jobs\LatexCV\source\main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 205.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 205.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 206.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 206.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: B231813910382BF89624D60A0BE6D5D6;267.
+(rerunfilecheck)             Checksum: 050E486ED20A97C9A73F2CA471BC2C45;343.
  ) 
 Here is how much of TeX's memory you used:
- 27985 strings out of 493921
- 519886 string characters out of 3144879
- 589961 words of memory out of 3000000
- 30822 multiletter control sequences out of 15000+200000
+ 27989 strings out of 493921
+ 519972 string characters out of 3144879
+ 590980 words of memory out of 3000000
+ 30826 multiletter control sequences out of 15000+200000
  63747 words of font info for 69 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 69i,20n,59p,10379b,775s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 69i,20n,59p,10379b,782s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-mathsy.enc}{C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/enc/dvips/lm/lm-ec.enc}<C:/Program Files (x86)/
 MiKTeX 2.9/fonts/type1/public/lm/lmss10.pfb><C:/Program Files (x86)/MiKTeX 2.9/
@@ -1485,7 +1485,7 @@ lmss8.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmssbx10.pfb
 ><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsso10.pfb><C:/Progr
 am Files (x86)/MiKTeX 2.9/fonts/type1/public/lm/lmsy10.pfb><C:/Users/User/AppDa
 ta/Roaming/MiKTeX/2.9/fonts/type1/public/marvosym/marvosym.pfb>
-Output written on main.pdf (2 pages, 154178 bytes).
+Output written on main.pdf (2 pages, 153705 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  6 named destinations out of 1000 (max. 500000)
