@@ -18,6 +18,7 @@
 \usepackage{moderntimeline/moderntimeline}
 \usepackage{xpatch/xpatch}
 \usepackage{color, graphicx}
+\usepackage{setspace}
 %\usepackage{todonotes}
 
 \tlmaxdates{1996}{2018}              % Beggining and start of your timeline                        
@@ -25,7 +26,7 @@
 \usepackage[
 style=numeric-comp,
 autocite=superscript,
-backend=bibtex,
+%backend=bibtex,
 backend=bibtex8,
 natbib=true, 
 maxcitenames=2,
@@ -36,8 +37,10 @@ isbn=false,
 doi=false,
 uniquename=allinit,
 firstinits=true,
-sorting=ydnt,
-sortcites
+backref=false,
+sorting=none,
+sortcites,
+indexing=true
 ]{biblatex}
 \addbibresource{library.bib}
 
@@ -98,7 +101,6 @@ sortcites
 
 
 \begin{document}
-
 \makecvtitle
 
 \section{Profile}
@@ -152,7 +154,7 @@ I currently work for Renishaw developing software to process data from the Sprin
 \tldatecventry{2012}{Machine Learning}{Stanford}{Online Course}{}{} 	
 \bigskip
 
- 	
+\pagebreak
 \tlcventry{2008}{2011}{Research Associate}{Glasgow Caledonian University}{}{}{}
 \cvitem{\textit{Summary}}{
 	I specialized in human computer interaction in mobile computing applications. My responsibilities included: developing software for research projects, contributing to publications and teaching students including tutorials and lectures.
@@ -195,10 +197,13 @@ I currently work for Renishaw developing software to process data from the Sprin
 %\cvitem{\textit{Sixth Year Studies}}{Mathematics (A), Physics (A), Chemistry (A)}
 %\cvitem{\textit{Scottish Highers}}{Mathematics (A), Physics (A), Chemistry (A), Biology (A), English (A)}
 
-
+{
 \renewcommand*{\bibfont}{\small}
+%\onehalfspacing
+%\singlespacing
+\linespread{0.5}
 \printbibliography[heading=bibintoc, title=Publications]
-
+}
 
 
 
