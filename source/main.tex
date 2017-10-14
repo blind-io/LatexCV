@@ -8,7 +8,7 @@
 % https://www.ctan.org/tex-archive/macros/latex/contrib/moderncv
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\documentclass[11pt, a4paper, sans]{moderncv}
+\documentclass[10pt, a4paper, sans]{moderncv}
 \moderncvstyle{classic}
 \moderncvcolor{blue} 
 \usepackage[utf8]{inputenc}
@@ -18,7 +18,29 @@
 \usepackage{moderntimeline/moderntimeline}
 \usepackage{xpatch/xpatch}
 \usepackage{color, graphicx}
-\tlmaxdates{1999}{2018}              % Beggining and start of your timeline                        
+%\usepackage{todonotes}
+
+\tlmaxdates{1996}{2018}              % Beggining and start of your timeline                        
+
+\usepackage[
+style=numeric-comp,
+autocite=superscript,
+backend=bibtex,
+backend=bibtex8,
+natbib=true, 
+maxcitenames=2,
+maxbibnames=99,
+url=false,
+hyperref = true, 
+isbn=false, 
+doi=false,
+uniquename=allinit,
+firstinits=true,
+sorting=ydnt,
+sortcites
+]{biblatex}
+\addbibresource{library.bib}
+
 
 \newcommand{\cvreferencecolumn}[2]{%
   \cvitem[0.8em]{}{%
@@ -72,7 +94,7 @@
 %\social[github]{mdastro}   % optional, remove / comment the line if not wanted           
 %\extrainfo{\emailsymbol \emaillink{mdantas.astro@gmail.com}}
 %\quote{Dubitando ad veritatem parvenimus - \emph{Cicerone}}                       
-\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
+%\makeatletter\renewcommand*{\bibliographyitemlabel}{\@biblabel{\arabic{enumiv}}}\makeatother
 
 
 \begin{document}
@@ -81,14 +103,12 @@
 
 \section{Profile}
 \cvitem{}{
-I currently work for Renishaw writing software for the Sprint scanning probe used in industrial CNC machines. I am currently seeking employment in Europe in ….say something positive and vague- difficult challenging
+I currently work for Renishaw developing software to process data from the Sprint scanning probe used in industrial CNC milling machines. I am currently seeking employment as a software engineer in Europe. I am looking for a company that can provide me with interesting and challenging problems to solve.
 }
-\cvitem{}{
-My professional passion is solving difficult technical problems in an elegant way….
-}
+
 \bigskip
 
-\cvitem{\textit{Languages and Technogies}}{C++, Python (data analysis), Java, Mathematica, C\# inc XAML, C (embedded), J2ME, Android, CUDA, XML, Matlab}
+\cvitem{\textit{Programming Languages and Technogies}}{C\texttt{++}, Python (data analysis), Java, Mathematica, C\texttt{\#} inc XAML, C (embedded), J2ME, Android, CUDA, XML, Matlab}
 
 \bigskip
 \section{Experience and Education}
@@ -106,17 +126,16 @@ My professional passion is solving difficult technical problems in an elegant wa
 	\item Significantly improved the testing of our products and the culture of testing within our team
 	\item Re-implemented several core algorithms to make them faster or more accurate.
 	\item Data analysis 
-	\item Have proposed and implemented / shared practices to allow us to work more efficiently. 
 \end{itemize}
 }
 
-\bigskip
+%\bigskip
 
 
 \tlcventry{2011}{2015}{PhD}{Glasgow Caledonian University}{}{}{}
 \cvitem{\textit{Title}}{Inertial Motion Capture for At-Home Rehabilitation}
 \cvitem{\textit{Summary}}{
-	This project covered the design testing and implementation of an inertial motion capture system to be used in at-home rehabilitation applications. My co-researchers were responsible for developing patient facing visualisations, I was responsible for designing, developing and testing all technological aspects of the motion capture system including:
+	This project covered the design testing and implementation of an inertial motion capture system to be used in at-home rehabilitation applications\supercite{Ayoade2011,Morton2013b}. My co-researchers were responsible for developing patient facing visualisations, I was responsible for designing, developing and testing all technological aspects of the motion capture system including:
 	\begin{itemize}
 		\item Radio network protocols (XBee and ANT)
 		\item Embedded software (C, FreeRTOS)
@@ -126,7 +145,7 @@ My professional passion is solving difficult technical problems in an elegant wa
 	\end{itemize}
 }
 
-\pagebreak
+%\pagebreak
 \tldatecventry{2015}{Algorithms: Analysis and Design, Part 1}{Stanford}{Online Course}{}{} 
 \tldatecventry{2015}{Algorithms: Analysis and Design, Part 2}{Stanford}{Online Course}{}{} 
 \tldatecventry{2015}{Parallel and Heterogeneous Programming}{Illinois, Urbana–Champaign}{Online Course}{}{} 
@@ -134,29 +153,26 @@ My professional passion is solving difficult technical problems in an elegant wa
 \bigskip
 
  	
-\tlcventry{2008}{2011}{Research Associate}{Glasgow Caledonian University	}{}{}{}
+\tlcventry{2008}{2011}{Research Associate}{Glasgow Caledonian University}{}{}{}
 \cvitem{\textit{Summary}}{
-\begin{itemize}
-	\item Specialising in human computer interaction in mobile computing applications
-	\item Developing software for research projects
-	\item Carrying out research activities
-	\item Teaching including tutorials and lectures
-\end{itemize}
+	I specialized in human computer interaction in mobile computing applications. My responsibilities included: developing software for research projects, contributing to publications and teaching students including tutorials and lectures.
 }
 \cvitem{\textit{Projects}}{
 \begin{itemize}
-	\item 	Monitoring physical activity patterns using accelerometers and GPS
-	\item 	Location aware mobile games
-	\item 	Supervision of interns sponsored by Orange Research
+	\item 	Monitoring physical activity patterns using accelerometers and GPS\supercite{Baillie2009a}
+	\item 	Location aware mobile games\supercite{Mcvicar2008,Baillie2011,Baillie2010}
+	\item 	Supervision of interns sponsored by Orange Research\supercite{Beattie2011,Baillie2011a}
 	\item 	Working with primary and secondary schools to develop an interactive guide to the 2014 Glasgow Commonwealth Games
-	\item 	Custom application commissions from businesses
+	\item 	Custom application commissions from businesses\supercite{Baillie2009}
 \end{itemize}
 }
+
+
 
 
 
 \tlcventry{2008}{2009}{PGDip, Advanced Computing}{Glasgow Caledonian University}{}{}{}
-\bigskip
+%\bigskip
 \tldatecventry{2008}{Putting Java to Work}{Open University}{}{}{}
 \tldatecventry{2008}{CCNA: Cisco Certified Network Associate}{Open University}{}{}{}
 \tldatecventry{2007}{Object Oriented Programming with Java}{Open University}{}{}{}
@@ -180,8 +196,8 @@ My professional passion is solving difficult technical problems in an elegant wa
 %\cvitem{\textit{Scottish Highers}}{Mathematics (A), Physics (A), Chemistry (A), Biology (A), English (A)}
 
 
-
-
+\renewcommand*{\bibfont}{\small}
+\printbibliography[heading=bibintoc, title=Publications]
 
 
 
@@ -198,7 +214,7 @@ My professional passion is solving difficult technical problems in an elegant wa
     	PhD Supervisor \\     	
     	 \emailsymbol l.baillie@gcu.ac.uk }
 \end{cvcolumns}
-
+%\todo[inline]{update lynnes address, ask alex}
 
 \clearpage
 
