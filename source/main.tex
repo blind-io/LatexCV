@@ -26,8 +26,7 @@
 \usepackage[
 style=numeric-comp,
 autocite=superscript,
-%backend=bibtex,
-backend=bibtex8,
+backend=bibtex,
 natbib=true, 
 maxcitenames=2,
 maxbibnames=99,
@@ -39,11 +38,16 @@ uniquename=allinit,
 firstinits=true,
 backref=false,
 sorting=none,
+pages=false
 sortcites,
 indexing=true
 ]{biblatex}
-\addbibresource{library.bib}
 
+\addbibresource{./cvreferences.bib}
+% removes the [1] from the bibliography and prints 1.
+\DeclareFieldFormat{labelnumberwidth}{{#1\adddot}}
+%removes the pages field from the biliography
+\DeclareFieldFormat{pages}{}%
 
 \newcommand{\cvreferencecolumn}[2]{%
   \cvitem[0.8em]{}{%
@@ -87,10 +91,14 @@ indexing=true
 % Personal Information
 \name{Lee}{Morton}
 \title{\emph{Curriculum Vitae}}                              
+
+%\address{Contact details redacted}{}{}{}
+
 \address{11 Cambridge Avenue}{Dursley, Gloucestershire, UK}{GL11 4AU }
-\phone[mobile]{+44~(0)~7708~218~756}                   
-%\phone[fixed]{+55~(11)~3091~2722}
+\phone[fixed]{+44~(0)~7708~218~756}                   
+%\phone[mobile]{}
 \email{leemorton123@gmail.com}                % optional, remove / comment the line if not wanted
+
 %\homepage{mdastro.wix.com/maria-luiza-dantas}    % optional, remove / comment the line if not wanted
 %\social[linkedin]{https://br.linkedin.com/in/maria-luiza-linhares-dantas-56408033}  % optional, remove / comment the line if not wanted     
 %\social[twitter]{mdastro}  % optional, remove / comment the line if not wanted
@@ -105,12 +113,12 @@ indexing=true
 
 \section{Profile}
 \cvitem{}{
-I currently work for Renishaw developing software to process data from the Sprint scanning probe used in industrial CNC milling machines. I am currently seeking employment as a software engineer in Europe. I am looking for a company that can provide me with interesting and challenging problems to solve.
+I currently work for Renishaw developing software to process data from the Sprint scanning probe used in industrial CNC milling machines. I am seeking employment as a software engineer. I am looking for a company that can provide me with interesting and challenging problems to solve.
 }
 
 \bigskip
 
-\cvitem{\textit{Programming Languages and Technogies}}{C\texttt{++}, Python (data analysis), Java, Mathematica, C\texttt{\#} inc XAML, C (embedded), J2ME, Android, CUDA, XML, Matlab}
+\cvitem{\textit{Programming Languages and Technogies}}{C\texttt{++}, Python (data analysis), Java, Mathematica, C\texttt{\#}, C (embedded), J2ME, Android, CUDA, XML, Matlab}
 
 \bigskip
 \section{Experience and Education}
@@ -137,7 +145,7 @@ I currently work for Renishaw developing software to process data from the Sprin
 \tlcventry{2011}{2015}{PhD}{Glasgow Caledonian University}{}{}{}
 \cvitem{\textit{Title}}{Inertial Motion Capture for At-Home Rehabilitation}
 \cvitem{\textit{Summary}}{
-	This project covered the design testing and implementation of an inertial motion capture system to be used in at-home rehabilitation applications\supercite{Ayoade2011,Morton2013b}. My co-researchers were responsible for developing patient facing visualisations, I was responsible for designing, developing and testing all technological aspects of the motion capture system including:
+	This project covered the design testing and implementation of an inertial motion capture system to be used in at--home rehabilitation applications.\supercite{Ayoade2011,Morton2013b} My co-researchers were responsible for developing patient facing visualisations, I was responsible for designing, developing and testing all technological aspects of the motion capture system including:
 	\begin{itemize}
 		\item Radio network protocols (XBee and ANT)
 		\item Embedded software (C, FreeRTOS)
@@ -202,6 +210,7 @@ I currently work for Renishaw developing software to process data from the Sprin
 %\onehalfspacing
 %\singlespacing
 \linespread{0.5}
+
 \printbibliography[heading=bibintoc, title=Publications]
 }
 
@@ -213,10 +222,13 @@ I currently work for Renishaw developing software to process data from the Sprin
     \cvcolumn{Alex Kane }{
     	Manager\\
     	Renishaw PLC\\
+    	\phonesymbol +44 (0)145 352 3317\\
     	\emailsymbol Alex.Kane@Renishaw.com
     	}
-    \cvcolumn{Professor Lynne Baillie}{
-    	PhD Supervisor \\     	
+    \cvcolumn{Lynne Baillie}{
+    	PhD Supervisor \\   
+    	Heriot--Watt University\\
+    	\phonesymbol +44 (0)131 451 4160\\  	
     	 \emailsymbol l.baillie@gcu.ac.uk }
 \end{cvcolumns}
 %\todo[inline]{update lynnes address, ask alex}
