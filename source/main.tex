@@ -21,6 +21,12 @@
 \usepackage{setspace}
 %\usepackage{todonotes}
 
+\newif\ifredacted
+\redactedtrue
+%\redactedfalse
+
+
+
 \tlmaxdates{1996}{2018}              % Beggining and start of your timeline                        
 
 \usepackage[
@@ -92,13 +98,15 @@ indexing=true
 \name{Lee}{Morton}
 \title{\emph{Curriculum Vitae}}                              
 
-%\address{Contact details redacted}{}{}{}
 
+\ifredacted
+\address{Contact details redacted}{}{}
+\else
 \address{11 Cambridge Avenue}{Dursley, Gloucestershire, UK}{GL11 4AU }
 \phone[fixed]{+44~(0)~7708~218~756}                   
 %\phone[mobile]{}
 \email{leemorton123@gmail.com}                % optional, remove / comment the line if not wanted
-
+\fi
 %\homepage{mdastro.wix.com/maria-luiza-dantas}    % optional, remove / comment the line if not wanted
 %\social[linkedin]{https://br.linkedin.com/in/maria-luiza-linhares-dantas-56408033}  % optional, remove / comment the line if not wanted     
 %\social[twitter]{mdastro}  % optional, remove / comment the line if not wanted
@@ -113,7 +121,7 @@ indexing=true
 
 \section{Profile}
 \cvitem{}{
-I currently work for Renishaw developing software to process data from the Sprint scanning probe used in industrial CNC milling machines. I am seeking employment as a software engineer. I am looking for a company that can provide me with interesting and challenging problems to solve.
+I currently work in the UK for Renishaw developing software to process data from the Sprint scanning probe used in industrial CNC milling machines. I am seeking employment as a software engineer. I am looking for a company that can provide me with interesting and challenging problems to solve.
 }
 
 \bigskip
@@ -131,11 +139,12 @@ I currently work for Renishaw developing software to process data from the Sprin
 }
 \cvitem{}{
 \begin{itemize}
-	\item {Implemented customer specific software and proved out complex processes on customer sites.}
-	\item Made significant contributions to the development of new technologies and applications.
+	\item Implemented customer specific software and proved out complex processes on customer sites
+	\item Made significant contributions to the development of new technologies and applications
+	\item Actively proposed and implemented improvements to our software including usability, API design and architecture
 	\item Significantly improved the testing of our products and the culture of testing within our team
-	\item Re-implemented several core algorithms to make them faster or more accurate.
-	\item Data analysis 
+	\item Re-implemented several core algorithms to make them faster or more accurate
+	\item Analysis of test data
 \end{itemize}
 }
 
@@ -218,19 +227,23 @@ I currently work for Renishaw developing software to process data from the Sprin
 
 \section{References}
 
+\ifredacted
+\cvitem{}{References available on request}
+\else
 \begin{cvcolumns}
     \cvcolumn{Alex Kane }{
     	Manager\\
     	Renishaw PLC\\
     	\phonesymbol +44 (0)145 352 3317\\
-    	\emailsymbol Alex.Kane@Renishaw.com
+    	\emailsymbol alex.kane@renishaw.com
     	}
     \cvcolumn{Lynne Baillie}{
     	PhD Supervisor \\   
     	Heriot--Watt University\\
     	\phonesymbol +44 (0)131 451 4160\\  	
-    	 \emailsymbol l.baillie@gcu.ac.uk }
+    	 \emailsymbol l.baillie@hw.ac.uk }
 \end{cvcolumns}
+\fi
 %\todo[inline]{update lynnes address, ask alex}
 
 \clearpage
